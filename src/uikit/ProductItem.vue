@@ -101,7 +101,7 @@ export default defineComponent({
                     <span v-if="oldPrice" class="old-price">{{ oldPrice }}</span>
                     <p>{{ price }}</p>
                 </div>
-                <button type="button" class="button" value="0" @click="() => inCartBtn(id)">
+                <button type="button" class="button" value="0" @click="() => !inCart && inCartBtn(id)">
                     <Loader v-if="isLoadingBtn" />
 
                     <Check v-else-if="!isLoadingBtn && inCart" />
